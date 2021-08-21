@@ -36,8 +36,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Deploy
         run: |
-          git config --global user.name  $user_name
-          git config --global user.email $user_email
+          git config --global user.name  ${{ user_name }}
+          git config --global user.email ${{ user_email }}
           git remote set-url origin https://${github_toiken}@github.com/${repository}
           npm run deploy
         env:
